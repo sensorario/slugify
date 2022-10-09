@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-func slugify(sentence string) string {
+func Slugify(sentence string) string {
 	sentence = strings.ReplaceAll(sentence, " ", "-")
 	sentence = strings.ReplaceAll(sentence, "'", "-")
 	sentence = strings.ReplaceAll(sentence, "\n", "")
