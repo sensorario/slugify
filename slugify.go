@@ -5,8 +5,15 @@ import (
 )
 
 func Slugify(sentence string) string {
-	sentence = strings.ReplaceAll(sentence, " ", "-")
-	sentence = strings.ReplaceAll(sentence, "'", "-")
-	sentence = strings.ReplaceAll(sentence, "\n", "")
+    s := map[string]string{
+        " ": "-",
+        "'": "-",
+        "\n": "",
+    }
+
+    for k, t := range s {
+        sentence = strings.ReplaceAll(sentence, k, t)
+    }
+
 	return sentence
 }
