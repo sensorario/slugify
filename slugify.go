@@ -11,9 +11,11 @@ func Slugify(sentence string) string {
         "\n": "",
     }
 
+    sentence = strings.Trim(sentence, " ")
+
     for k, t := range s {
         sentence = strings.ReplaceAll(sentence, k, t)
     }
 
-	return sentence
+	return strings.ToLower(sentence)
 }
