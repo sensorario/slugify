@@ -5,17 +5,17 @@ import (
 )
 
 func Slugify(sentence string) string {
-    s := map[string]string{
-        " ": "-",
-        "'": "-",
-        "\n": "",
-    }
+	s := map[string]string{
+		" ":  "-",
+		"'":  "-",
+		"\n": "",
+	}
 
-    sentence = strings.Trim(sentence, " ")
+	sentence = strings.Trim(sentence, " ")
 
-    for k, t := range s {
-        sentence = strings.ReplaceAll(sentence, k, t)
-    }
+	for k, t := range s {
+		sentence = strings.ReplaceAll(sentence, k, t)
+	}
 
 	return strings.ToLower(sentence)
 }

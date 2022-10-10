@@ -1,8 +1,8 @@
 package slugify
 
 import (
-	"testing"
 	"strings"
+	"testing"
 )
 
 func TestConvertSpacesIntoHyphens(t *testing.T) {
