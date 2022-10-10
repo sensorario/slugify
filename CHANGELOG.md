@@ -5,3 +5,4 @@
  - extract slugify from ff project
  - apply strings.ToLower() to final result
  - trim string before make slug
+ - add licence file
